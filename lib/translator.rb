@@ -14,7 +14,7 @@ end
 def get_japanese_emoticon(file_path, eng_emoticon)
   load_library(file_path).each do |get_keys, emote_hash|
     emote_hash.each do |eng_emote, jap_emote|
-      eng_emote == eng_emoticon ? return jap_emote : nil
+      eng_emote == eng_emoticon ? (return jap_emote) : nil
     end
   end
   "Sorry, that emoticon was not found"
