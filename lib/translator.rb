@@ -1,6 +1,7 @@
 require "yaml"
 require "pry"
 
+binding.pry
 def load_library(file_path)
   YAML.load_file(file_path)
 end
