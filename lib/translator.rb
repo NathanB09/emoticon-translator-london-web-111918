@@ -6,10 +6,10 @@ def load_library(file_path)
   loaded = emotes.each_with_object({}) do |(meaning, emote_array), loaded|
     loaded["get_meaning"] ||= {}
     loaded["get_emoticon"] ||= {}
-    binding.pry
     loaded["get_meaning"][emote_array[1]] = meaning
     loaded["get_emoticon"][emote_array[0]] = emote_array[1]
   end
+  binding.pry
 end
 load_library(file_path)
 def get_japanese_emoticon
