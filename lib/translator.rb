@@ -7,12 +7,13 @@ def load_library(file_path)
     emote_array.each do |emote|
       loaded["get_meaning"] ||= {}
       loaded["get_emoticon"] ||= {}
+      pry
       loaded["get_meaning"][emote[1]] = meaning
       loaded["get_emoticon"][emote[0]] = emote[1]
     end
   end
 end
-
+load_library(file_path)
 def get_japanese_emoticon
   # code goes here
 end
