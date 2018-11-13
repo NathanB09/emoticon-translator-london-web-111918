@@ -22,8 +22,8 @@ end
 
 def get_english_meaning(file_path, jap_emoticon)
   load_library(file_path).each do |get_keys, emote_hash|
-    emote_hash.each do |eng_emote, jap_emote|
-      jap_emote == jap_emoticon ? (return eng_emote) : nil
+    emote_hash.each do |jap_emote, meaning|
+      jap_emote == jap_emoticon ? (return meaning) : nil
     end
   end
   "Sorry, that emoticon was not found"
